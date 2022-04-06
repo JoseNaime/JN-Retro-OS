@@ -19,10 +19,10 @@
 <main>
 
     <!-- Apps Grid -->
-    <div id="apps-grid">
+    <div id="apps-grid" class="no-dynamic">
         <!--- Settings -->
-        <div id="settings-app" class="app">
-            <div class="app-icon">
+        <div id="settings-app" class="app no-dynamic">
+            <div class="app-icon no-dynamic">
                 <div></div>
             </div>
             <div class="app-name">
@@ -31,8 +31,8 @@
         </div>
 
         <!--- App 2 -->
-        <div class="app-container">
-            <div class="app-icon">
+        <div class="app-container no-dynamic">
+            <div class="app-icon no-dynamic">
             </div>
             <div class="app-name">
                 <h2>App 2</h2>
@@ -54,12 +54,37 @@
             <div class="window-section">
                 <h3>Background</h3>
                 <div>
-                    <div id="background-preview"></div>
+                    <div id="background-preview">
+
+                    </div>
                     <p id="background-name">Background Name</p>
                 </div>
-                <div>
+                <div class="buttons-container">
                     <button id="btn-prev-background"><</button>
                     <button id="btn-next-background">></button>
+                </div>
+            </div>
+            <div class="window-section">
+                <h3>Color</h3>
+                <div>
+                    <div id="color_1-preview" class="color-preview"></div>
+                    <p id="color_1-name">Color 1 Name</p>
+                </div>
+                <div class="buttons-container">
+                    <button id="btn-prev-color_1"><</button>
+                    <button id="btn-next-color_1">></button>
+                </div>
+
+            </div>
+            <div class="window-section">
+                <h3>Cursor</h3>
+                <div>
+                    <div id="cursor-preview"></div>
+                    <p id="cursor-name">Background Name</p>
+                </div>
+                <div class="buttons-container">
+                    <button id="btn-prev-cursor"><</button>
+                    <button id="btn-next-cursor">></button>
                 </div>
             </div>
         </div>
