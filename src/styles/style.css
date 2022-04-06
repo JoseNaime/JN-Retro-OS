@@ -65,6 +65,10 @@ button{
 	border-right: solid 2px #000;
 }
 
+#settings-window .window-section:last-child{
+	border-right: none;
+}
+
 #settings-window .buttons-container{
 	display: flex;
 	gap: 25px;

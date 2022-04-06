@@ -41,6 +41,7 @@ class Settings_App {
         $('#background-name').html(currentBackground.name);
     }
 
+    // TODO: Change preview images with no background
     setColor(section){
         const colorPrev =  $('#color_' + section + '-preview');
         let currentColor;

@@ -25,31 +25,31 @@ class CONSTANTS {
         },
         {
             name: 'Gray',
-            hex: '#C2C2C2'
+            hex: '#d9d9d9'
         },
         {
             name: 'Red',
-            hex: '#FCE3E3'
+            hex: '#fff0f0'
         },
         {
             name: 'Orange',
-            hex: '#F8C9C9'
+            hex: '#fff3eb'
         },
         {
             name: 'Yellow',
-            hex: '#F9E3C9'
+            hex: '#fff7e5'
         },
         {
             name: 'Green',
-            hex: '#C9F9E3'
+            hex: '#f1ffea'
         },
         {
             name: 'Blue',
-            hex: '#c9dcf9'
+            hex: '#eaf2ff'
         },
         {
             name: 'Purple',
-            hex: '#d7c9f9'
+            hex: '#f5f1ff'
         }
     ]
 
