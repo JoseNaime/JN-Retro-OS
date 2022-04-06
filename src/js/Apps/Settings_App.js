@@ -30,9 +30,22 @@ class Settings_App {
 
         this.setColor(1);
 
+        // --- MOUSE POINTER
+        // set next mouse pointer button
+        this.mousePointerIndex = 0;
+        $('#btn-next-mouse-pointer').click(() => {
+            this.nextMousePointer();
+        })
+        // set prev mouse pointer button
+        $('#btn-prev-mouse-pointer').click(() => {
+            this.prevMousePointer();
+        })
+
+        this.setMousePointer();
+
 
     }
-
+    // BACKGROUND
     setBackground() {
         const backgroundElement = $('#background');
         const currentBackground = CONSTANTS.BACKGROUNDS[this.backgroundIndex];
@@ -41,7 +54,23 @@ class Settings_App {
         $('#background-name').html(currentBackground.name);
     }
 
-    // TODO: Change preview images with no background
+    nextBackground() {
+        this.backgroundIndex++;
+        if (this.backgroundIndex >= CONSTANTS.BACKGROUNDS.length) {
+            this.backgroundIndex = 0;
+        }
+        this.setBackground();
+    }
+
+    prevBackground() {
+        this.backgroundIndex--;
+        if (this.backgroundIndex < 0) {
+            this.backgroundIndex = CONSTANTS.BACKGROUNDS.length - 1;
+        }
+        this.setBackground();
+    }
+
+    // COLOR
     setColor(section){
         const colorPrev =  $('#color_' + section + '-preview');
         let currentColor;
@@ -93,20 +122,28 @@ class Settings_App {
         this.setColor(section)
     }
 
-    nextBackground() {
-        this.backgroundIndex++;
-        if (this.backgroundIndex >= CONSTANTS.BACKGROUNDS.length) {
-            this.backgroundIndex = 0;
-        }
-        this.setBackground();
+    // MOUSE POINTER
+    setMousePointer() {
+        const currentMousePointer = CONSTANTS.MOUSE_POINTERS[this.mousePointerIndex];
+        $('html, button').css('cursor', `url(${currentMousePointer.url}), auto`);
+        $('#mouse-pointer-preview').attr('src', currentMousePointer.url);
+        $('#mouse-pointer-name').html(currentMousePointer.name);
     }
 
-    prevBackground() {
-        this.backgroundIndex--;
-        if (this.backgroundIndex < 0) {
-            this.backgroundIndex = CONSTANTS.BACKGROUNDS.length - 1;
+    nextMousePointer() {
+        this.mousePointerIndex++;
+        if (this.mousePointerIndex >= CONSTANTS.MOUSE_POINTERS.length) {
+            this.mousePointerIndex = 0;
         }
-        this.setBackground();
+        this.setMousePointer();
+    }
+
+    prevMousePointer() {
+        this.mousePointerIndex--;
+        if (this.mousePointerIndex < 0) {
+            this.mousePointerIndex = CONSTANTS.MOUSE_POINTERS.length - 1;
+        }
+        this.setMousePointer();
     }
 
 }

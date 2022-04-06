@@ -25,31 +25,31 @@ class CONSTANTS {
         },
         {
             name: 'Gray',
-            hex: '#d9d9d9'
+            hex: '#c5c5c5'
         },
         {
             name: 'Red',
-            hex: '#fff0f0'
+            hex: '#ffd5d5'
         },
         {
             name: 'Orange',
-            hex: '#fff3eb'
+            hex: '#ffd9c2'
         },
         {
             name: 'Yellow',
-            hex: '#fff7e5'
+            hex: '#ffe9b8'
         },
         {
             name: 'Green',
-            hex: '#f1ffea'
+            hex: '#cbffb2'
         },
         {
             name: 'Blue',
-            hex: '#eaf2ff'
+            hex: '#b0cdff'
         },
         {
             name: 'Purple',
-            hex: '#f5f1ff'
+            hex: '#cebcff'
         }
     ]
 
@@ -87,6 +87,17 @@ class CONSTANTS {
             hex: '#4f2b5b'
         }
 
+    ]
+
+    static MOUSE_POINTERS = [
+        {
+            name: 'Default',
+            url: './src/img/mousePointers/mouse-pointer_1.svg'
+        },
+        {
+            name: 'Arrow',
+            url: './src/img/mousePointers/mouse-pointer_2.svg'
+        }
     ]
 
 
