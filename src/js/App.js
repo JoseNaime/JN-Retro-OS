@@ -8,9 +8,10 @@ class App{
 
         this.relatedWindow = WindowsManager.getInstance().getWindow(this.name)
 
-        // Open window if app is clicked
+        // Open window if app is clicked and focus
         this.elementHtml.addEventListener('click', () => {
             this.relatedWindow.open();
+            WindowsManager.getInstance().focusWindow(this.relatedWindow);
         });
     }
 }

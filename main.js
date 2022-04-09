@@ -13,4 +13,11 @@ class Main{
     }
 }
 
-const main = new Main();
+window.addEventListener('load', () => {
+    // Unhide elements
+    $("#content-container").removeClass("hidden");
+
+
+    // Create Main
+    new Main();
+});

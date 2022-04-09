@@ -25,7 +25,7 @@ h1{
 }
 
 h2{
-	font-size: 1.5em;
+	font-size: 1.3em;
 }
 
 h3 {
@@ -38,6 +38,112 @@ button{
 	border: solid 2px #000;
 	padding: 5px 10px;
 	box-shadow: 4px 4px 0 #000;
+}
+
+.hidden{
+	display: none;
+}
+
+#loading-screen{
+	pointer-events: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	animation:  fade-loading-screen 2s forwards;
+	animation-delay: 8s;
+}
+
+@keyframes fade-loading-screen{
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+		display: none;
+	}
+}
+
+#loading-screen-content{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 350px;
+	height: 350px;
+	border: 3px solid #000;
+}
+
+#loading-screen-logo img{
+	height: 100px;
+	animation: init-logo 2s linear forwards;
+}
+
+@keyframes init-logo{
+	0%{
+		transform: scale(.25);
+	}
+	24%{
+		transform: scale(.25);
+	}
+	25%{
+		transform: scale(.5);
+	}
+	49%{
+		transform: scale(.5);
+	}
+	50% {
+		transform : scale(.75);
+	}
+	74%{
+		transform: scale(.75);
+	}
+	75%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+#loading-bar-content{
+	border: solid 3px #000;
+	width: 250px;
+	height: 20px;
+}
+
+#loading-bar{
+	width: 0%;
+	background: url('../img/backgrounds/dots_4px.png');
+	height: 100%;
+	animation: loading-bar-animation 4s linear forwards;
+	animation-delay: 2s;
+}
+
+@keyframes loading-bar-animation {
+	0%{
+		width: 0%;
+	}
+	28%{
+		width: 28%;
+	}
+	40%{
+		width: 28%;
+	}
+	88%{
+		width: 75%;
+	}
+	95%{
+		width: 75%;
+	}
+	100%{
+		width: 100%;
+	}
 }
 
 #background {
@@ -120,7 +226,10 @@ button{
 	border: 2px solid #000;
 }
 
-
+#calculator-window{
+	width: 200px;
+	height: 300px;
+}
 
 .window{
 	display: flex;
@@ -145,6 +254,7 @@ button{
 }
 
 .window-header{
+	cursor: move;
 	display: flex;
 	justify-content: space-between;
 	padding: 0 15px;
@@ -156,10 +266,72 @@ button{
 }
 
 .window-body{
-	pointer-events: auto;
-	display: grid;
+ display: grid;
+}
+
+#settings-window .window-body{
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr;
+}
+
+
+#calculator-container{
+	
+	margin: 10px 20px;
+	bottom: 0;
+}
+
+#calculator-display-container{
+	padding: 0 15px;
+	display: flex;
+	height: 35px;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid #000000;
+	margin-bottom: 10px;
+}
+
+#calculator-display{
+	text-align: right;
+	width: 100%;
+}
+
+#calculator-grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: repeat(auto-fill, 1fr);
+	height: 80%;
+	justify-items: center;
+	align-items: center;
+}
+
+.calculator-button{
+	background-color: #FFFFFF;
+	border-radius: 0;
+	width: 8px;
+	height: 8px;
+	row-gap: 8px;
+	border: solid 2px #000;
+	padding: 10px 8px;
+	padding-top: 4px;
+	box-shadow: 4px 4px 0 #000;
+}
+
+#calc-zero{
+	grid-column: 1 / 3;
+	text-align: center;
+	width: 45px;
+}
+
+#calc-ans{
+	grid-column: 4/5;
+	grid-row: 4/6;
+	height: 45px
+}
+
+.window-body{
+	pointer-events: auto;
+
 	width: 100%;
 	height: 100%;
 }

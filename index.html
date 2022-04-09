@@ -3,96 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="icon" href="src/img/logo_small.png">
+
     <link rel="stylesheet" href="./src/styles/reset.css" type="text/css" />
     <link rel="stylesheet" href="./src/styles/fonts.css" type="text/css" />
     <link rel="stylesheet" href="./src/styles/style.css" type="text/css">
 </head>
 <body id="background">
-<header id="top-bar">
-    <div>
-        <img src="./src/img/Logo.png" alt="logo" id="logo" />
-    </div>
-    <div>
-        <p id="date">Test</p>
-    </div>
-</header>
-<main>
 
-    <!-- Apps Grid -->
-    <div id="apps-grid" class="no-dynamic">
-        <!--- Settings -->
-        <div id="settings-app" class="app no-dynamic">
-            <div class="app-icon no-dynamic">
+<!-- Loading Screen
+<div id="loading-screen">
+    <div id="loading-screen-content">
+        <div id="loading-screen-logo">
+            <img src="src/img/logo.png" alt="logo">
+        </div>
+        <div id="loading-screen-text">
+            <p>Loading...</p>
+            <div id="loading-bar-content">
+                <div id="loading-bar">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div id="content-container" class="hidden">
+    <header id="top-bar">
+        <div>
+            <img src="src/img/logo.png" width="50px" alt="logo" id="logo" />
+        </div>
+        <div>
+            <p id="date">Test</p>
+        </div>
+    </header>
+    <main>
+
+        <!-- Apps Grid -->
+        <div id="apps-grid" class="no-dynamic">
+            <!--- Settings -->
+            <div id="settings-app" class="app no-dynamic">
+                <div class="app-icon no-dynamic">
+                    <div></div>
+                </div>
+                <div class="app-name">
+                    <h2>Settings</h2>
+                </div>
+            </div>
+
+            <!--- Calculator -->
+            <div id="calculator-app" class="app no-dynamic">
+                <div class="app-icon no-dynamic">
+                </div>
+                <div class="app-name">
+                    <h2>Calculator</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- -------- Apps Windows -------- -->
+        <!-- Settings -->
+        <div id="settings-window" class="window">
+            <div class="window-header">
+                <div class="window-close">
+                    <div>X</div>
+                </div>
+                <h2>Settings</h2>
                 <div></div>
             </div>
-            <div class="app-name">
-                <h2>Settings</h2>
-            </div>
-        </div>
+            <div class="window-body">
+                <div class="window-section">
+                    <h3>Background</h3>
+                    <div>
+                        <div id="background-preview">
 
-        <!--- App 2 -->
-        <div class="app no-dynamic">
-            <div class="app-icon no-dynamic">
-            </div>
-            <div class="app-name">
-                <h2>App 2</h2>
-            </div>
-        </div>
-    </div>
+                        </div>
+                        <p id="background-name">Background Name</p>
+                    </div>
+                    <div class="buttons-container">
+                        <button id="btn-prev-background"><</button>
+                        <button id="btn-next-background">></button>
+                    </div>
+                </div>
+                <div class="window-section">
+                    <h3>Color</h3>
+                    <div class="color-preview-container">
+                        <div id="color_1-preview" class="color-preview"></div>
+                        <p id="color_1-name">Color 1 Name</p>
+                    </div>
+                    <div class="buttons-container">
+                        <button id="btn-prev-color_1"><</button>
+                        <button id="btn-next-color_1">></button>
+                    </div>
 
-    <!-- -------- Apps Windows -------- -->
-    <!-- Settings -->
-    <div id="settings-window" class="window">
-        <div class="window-header">
-            <div class="window-close">
-                <div>X</div>
+                </div>
+                <div class="window-section">
+                    <h3>Mouse Pointer</h3>
+                    <div id="mouse-pointer-preview-container">
+                        <div id="mouse-pointer-preview-square">
+                            <img id="mouse-pointer-preview"
+                                 src="./src/img/mousePointers/mouse-pointer_1.svg"
+                                 alt="mouse-pointer" />
+                        </div>
+                        <p id="mouse-pointer-name">Cursor Name</p>
+                    </div>
+                    <div class="buttons-container">
+                        <button id="btn-prev-mouse-pointer"><</button>
+                        <button id="btn-next-mouse-pointer">></button>
+                    </div>
+                </div>
             </div>
-            <h2>Settings</h2>
-            <div></div>
         </div>
-        <div class="window-body">
-            <div class="window-section">
-                <h3>Background</h3>
+        <!-- Calculator -->
+        <div id="calculator-window" class="window">
+            <div class="window-header">
+                <div class="window-close">
+                    <div>X</div>
+                </div>
+                <h2>Calculator</h2>
                 <div>
-                    <div id="background-preview">
-
-                    </div>
-                    <p id="background-name">Background Name</p>
-                </div>
-                <div class="buttons-container">
-                    <button id="btn-prev-background"><</button>
-                    <button id="btn-next-background">></button>
                 </div>
             </div>
-            <div class="window-section">
-                <h3>Color</h3>
-                <div class="color-preview-container">
-                    <div id="color_1-preview" class="color-preview"></div>
-                    <p id="color_1-name">Color 1 Name</p>
-                </div>
-                <div class="buttons-container">
-                    <button id="btn-prev-color_1"><</button>
-                    <button id="btn-next-color_1">></button>
-                </div>
-
-            </div>
-            <div class="window-section">
-                <h3>Mouse Pointer</h3>
-                <div id="mouse-pointer-preview-container">
-                    <div id="mouse-pointer-preview-square">
-                        <img id="mouse-pointer-preview" src="./src/img/mousePointers/mouse-pointer_1.svg" alt="mouse-pointer" />
+            <div class="window-body">
+                <div id="calculator-container">
+                    <div id="calculator-display-container">
+                        <p id="calculator-display">
+                        </p>
                     </div>
-                    <p id="mouse-pointer-name">Cursor Name</p>
-                </div>
-                <div class="buttons-container">
-                    <button id="btn-prev-mouse-pointer"><</button>
-                    <button id="btn-next-mouse-pointer">></button>
+                    <div id="calculator-grid">
+                        <div class="calculator-button">C</div>
+                        <div class="calculator-button">=</div>
+                        <div class="calculator-button">/</div>
+                        <div class="calculator-button">*</div>
+
+                        <div class="calculator-button">7</div>
+                        <div class="calculator-button">8</div>
+                        <div class="calculator-button">9</div>
+                        <div class="calculator-button">-</div>
+
+                        <div class="calculator-button">4</div>
+                        <div class="calculator-button">5</div>
+                        <div class="calculator-button">6</div>
+                        <div class="calculator-button">+</div>
+
+                        <div class="calculator-button">1</div>
+                        <div class="calculator-button">2</div>
+                        <div class="calculator-button">3</div>
+                        <div class="calculator-button" id="calc-ans">=</div>
+
+                        <div class="calculator-button" id='calc-zero'>0</div>
+                        <div class="calculator-button">.</div>
+
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-</main>
+    </main>
+</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="./main.js" type="module"></script>
