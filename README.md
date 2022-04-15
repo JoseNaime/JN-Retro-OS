@@ -5,7 +5,7 @@
 ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
 
 This project is an emulation of a retro non-existing OS (Operative System), which had as 
-inspiration, the [Machintosh](https://history-computer.com/macintosh-by-apple-complete-history-of-mac-computers/#:~:text=The%20first%20Macintosh%20was%20introduced,line%20interface%20of%20its%20predecessors.) interface.
+inspiration the [Machintosh](https://history-computer.com/macintosh-by-apple-complete-history-of-mac-computers/#:~:text=The%20first%20Macintosh%20was%20introduced,line%20interface%20of%20its%20predecessors.) interface.
 
 ## How to Use It
 The project is running in GitHub pages, so you can access it in the following link:
