@@ -5,7 +5,7 @@
 ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
 
 This project is an emulation of a retro non-existing OS (Operative System), which had as 
-inspiration the [Machintosh](https://history-computer.com/macintosh-by-apple-complete-history-of-mac-computers/#:~:text=The%20first%20Macintosh%20was%20introduced,line%20interface%20of%20its%20predecessors.) interface.
+inspiration the [Macintosh](https://history-computer.com/macintosh-by-apple-complete-history-of-mac-computers/#:~:text=The%20first%20Macintosh%20was%20introduced,line%20interface%20of%20its%20predecessors.) interface.
 
 ## How to Use It
 The project is running in GitHub pages, so you can access it in the following link:
@@ -13,12 +13,11 @@ https://josenaime.github.io/JN-Retro-OS/
 
 ## Features
 ##### Development
-* The OS is based on [HTML5](https://www.w3schools.com/html/html5_intro.asp) and [CSS3](https://www.w3schools.com/css/css3_intro.asp)
-* The OS logic is based on [JavaScript](https://www.w3schools.com/js/js_intro.asp) and [jQuery](https://jquery.com/) framework.
+* The Web OS is based on [HTML5](https://www.w3schools.com/html/html5_intro.asp) and [CSS3](https://www.w3schools.com/css/css3_intro.asp)
+* Logic was made with [JavaScript](https://www.w3schools.com/js/js_intro.asp) and [jQuery](https://jquery.com/) framework.
 
 ##### Core Functions
-* [Single page](https://en.wikipedia.org/wiki/Single-page_application) application, 
-  so the user can interact with it through the browser.
+* [Single page](https://en.wikipedia.org/wiki/Single-page_application) application
 * [Cross-platform](https://en.wikipedia.org/wiki/Cross-platform_application) 
   application, so it can be used in any device.
 
